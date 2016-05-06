@@ -569,10 +569,10 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 765530971}
   m_UseAutoMass: 0
-  m_Mass: 6
+  m_Mass: 11
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 50
+  m_AngularDrag: 0
+  m_GravityScale: 35
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -635,9 +635,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  maxSpeed: 350
+  maxSpeed: 275
   moveForce: 0
-  jumpVelocity: 1500
+  jumpVelocity: 3000
 --- !u!1 &800257675
 GameObject:
   m_ObjectHideFlags: 0
