@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using roastedrooster.chickenrun.laws;
+using roastedrooster.chickenrun.player;
 
 namespace Parallax
 {
@@ -72,6 +74,9 @@ namespace Parallax
             }
 
             if (Input.GetKey(KeyCode.Space) && (grounded || wallSliding)) {
+
+                LawManager.Instance.PlayerEvent(TriggeringEventID.PlayerJump, gameObject.GetComponent<Player>());
+
                 if (wallSliding) {
                     // Wall hopping
                     if (h == slidingDirection && !grounded) {

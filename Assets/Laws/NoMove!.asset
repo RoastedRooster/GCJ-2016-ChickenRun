@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Name: NoMove!
   m_EditorClassIdentifier: 
   name: No Move !
-  eventID: 1
+  eventID: 2
   duration: 2
   optionalArg: 0

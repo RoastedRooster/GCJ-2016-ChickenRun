@@ -13,7 +13,7 @@ namespace roastedrooster.chickenrun.player
         public void Punished(Law law)
         {
             Debug.Log(name + "has been punished ! He didn't respect the \"" + law.name + "\" rule !");
-            Destroy(gameObject);
+            gameObject.transform.position = GameObject.FindGameObjectWithTag("start").transform.position;
         }
     }
 }

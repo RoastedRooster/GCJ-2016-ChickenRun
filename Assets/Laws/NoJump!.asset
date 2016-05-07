@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Name: NoJump!
   m_EditorClassIdentifier: 
   name: No Jump !
-  eventID: 0
+  eventID: 1
   duration: 5
   optionalArg: 0
