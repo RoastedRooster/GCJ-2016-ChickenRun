@@ -114,7 +114,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 35486435}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ccc69ca813ac5e94a8125b5c6016fad3, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -229,7 +229,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 189342780}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ccc69ca813ac5e94a8125b5c6016fad3, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -387,7 +387,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 207981765}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ccc69ca813ac5e94a8125b5c6016fad3, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -634,7 +634,8 @@ GameObject:
   - 50: {fileID: 765530973}
   - 61: {fileID: 765530972}
   - 114: {fileID: 765530977}
-  m_Layer: 0
+  - 114: {fileID: 765530978}
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -731,6 +732,18 @@ MonoBehaviour:
   maxSpeed: 200
   jumpVelocity: 4000
   maxFrameHoldingJump: 10
+--- !u!114 &765530978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 765530971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b973f0adccccc9418d4b4bf326c34b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: 
 --- !u!1001 &768236660
 Prefab:
   m_ObjectHideFlags: 0
@@ -840,7 +853,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 919829256}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ccc69ca813ac5e94a8125b5c6016fad3, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -1123,7 +1136,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1077399069}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ccc69ca813ac5e94a8125b5c6016fad3, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -1207,7 +1220,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1121505057}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ccc69ca813ac5e94a8125b5c6016fad3, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -1253,7 +1266,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1228822349}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ccc69ca813ac5e94a8125b5c6016fad3, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -1434,7 +1447,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1571132142}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ccc69ca813ac5e94a8125b5c6016fad3, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -1518,7 +1531,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1574919564}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ccc69ca813ac5e94a8125b5c6016fad3, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -1564,7 +1577,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1620338030}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ccc69ca813ac5e94a8125b5c6016fad3, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -1732,7 +1745,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1675540520}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ccc69ca813ac5e94a8125b5c6016fad3, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -2002,7 +2015,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0.019607844}
+  m_BackGroundColor: {r: 0.4463127, g: 0.45861265, b: 0.47794116, a: 0.019607844}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -2075,7 +2088,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 2068397462}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ccc69ca813ac5e94a8125b5c6016fad3, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}

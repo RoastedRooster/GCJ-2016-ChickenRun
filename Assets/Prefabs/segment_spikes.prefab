@@ -13,7 +13,7 @@ GameObject:
   - 60: {fileID: 6076244}
   - 114: {fileID: 11449206}
   m_Layer: 0
-  m_Name: segment_picks
+  m_Name: segment_spikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -86,7 +86,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 195072}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ccc69ca813ac5e94a8125b5c6016fad3, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: -95.00046}
