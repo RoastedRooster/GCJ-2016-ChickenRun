@@ -26,10 +26,11 @@ namespace Parallax
         public Vector2 wallJumpOff;
         public Vector2 wallLeap;
 
-        public int slidingDirection;
+        public float slidingDirection;
 
         bool isInAir = false;
         public float wallClimbTime = .25f;
+        public float wallOffTime = .1f;
         public float timeUntilAirControl = 0;
 
         void Awake() {
@@ -43,7 +44,7 @@ namespace Parallax
         void FixedUpdate()
         {
             float h = Input.GetAxisRaw("Horizontal");
-
+            
             if(grounded) {
                 rb2d.velocity = new Vector2(h * maxSpeed, rb2d.velocity.y);
             } else {
@@ -52,7 +53,6 @@ namespace Parallax
                 }
             }
             
-
             /*
             if (((frameHoldingJump > 0 && !Input.GetKey(KeyCode.Space)) || frameHoldingJump >= maxFrameHoldingJump) && (grounded || wallSliding)) {
                 gameObject.GetComponent<Rigidbody2D>().AddForce(frameHoldingJump * Vector2.up * jumpVelocity / maxFrameHoldingJump, ForceMode2D.Impulse);
@@ -68,20 +68,31 @@ namespace Parallax
                 }
             }
             */
+
             if (wallSliding) {
                 // Slow player during wallSliding
                 rb2d.velocity = new Vector2(rb2d.velocity.x, -100);
             }
-
-            if (Input.GetKey(KeyCode.Space) && (grounded || wallSliding)) {
+            
+            // if (Input.GetKey(KeyCode.Space) && (grounded || wallSliding)) {
+            if (Input.GetButton("Jump") && (grounded || wallSliding)) {
 
                 LawManager.Instance.PlayerEvent(TriggeringEventID.PlayerJump, gameObject.GetComponent<Player>());
 
                 if (wallSliding) {
                     // Wall hopping
-                    if (h == slidingDirection && !grounded) {
+                    Debug.Log("H : " + Mathf.Abs(h));
+                    Debug.Log("SlidingDirection : " + slidingDirection / 2);
+                    
+                    if (Mathf.Abs(h) >= (0.5 * Mathf.Abs(slidingDirection)) && !grounded) {
+                    // if (h == slidingDirection && !grounded) {
                         rb2d.velocity = new Vector2(-slidingDirection * wallJumpClimb.x, wallJumpClimb.y);
                         timeUntilAirControl = wallClimbTime;
+                    } else if (h == -slidingDirection && !grounded) {
+                        // Leap jump
+                    } else if (!grounded) {
+                        rb2d.velocity = new Vector2(-slidingDirection * wallJumpOff.x, wallJumpOff.y);
+                        timeUntilAirControl = wallOffTime;
                     }
 
                     // Other wall jumps
