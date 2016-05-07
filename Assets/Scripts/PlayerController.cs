@@ -5,10 +5,7 @@ namespace Parallax
 {
     public class PlayerController : MonoBehaviour
     {
-
-        public float speed = 10;
         public float maxSpeed = 5f;
-        public float moveForce = 365f;
         public int jumpVelocity = 5;
         public int maxFrameHoldingJump = 20;
 
