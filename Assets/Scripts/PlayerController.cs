@@ -26,7 +26,9 @@ namespace Parallax
 
         public int slidingDirection;
 
-        bool isWallClimbing = false;
+        bool isInAir = false;
+        public float wallClimbTime = .25f;
+        public float timeUntilAirControl = 0;
 
         void Awake() {
             rb2d = GetComponent<Rigidbody2D>();
@@ -40,7 +42,7 @@ namespace Parallax
         {
             float h = Input.GetAxisRaw("Horizontal");
 
-            if(!isWallClimbing) {
+            if(timeUntilAirControl == 0) {
                 rb2d.velocity = new Vector2(h * maxSpeed, rb2d.velocity.y);
             }
 
@@ -59,32 +61,33 @@ namespace Parallax
                 }
             }
             */
+            if (wallSliding) {
+                // Slow player during wallSliding
+                rb2d.velocity = new Vector2(rb2d.velocity.x, -100);
+            }
 
             if (Input.GetKey(KeyCode.Space) && (grounded || wallSliding)) {
                 if (wallSliding) {
-                    Debug.Log("Wall slide jump");
-                    Debug.Log(h);
-                    Debug.Log(slidingDirection);
+                    // Wall hopping
                     if (h == slidingDirection && !grounded) {
-                        // rb2d.velocity.Set(rb2d.velocity.x, -50);
-
                         rb2d.velocity = new Vector2(-slidingDirection * wallJumpClimb.x, wallJumpClimb.y);
-                        isWallClimbing = true;
-                    } else {
-                        isWallClimbing = false;
+                        timeUntilAirControl = wallClimbTime;
                     }
-                }
-                else {
-                    rb2d.AddForce(maxFrameHoldingJump * Vector2.up * jumpVelocity / maxFrameHoldingJump, ForceMode2D.Impulse);
-                }
-            }
-            else {
-                if (wallSliding) {
-                    rb2d.velocity = new Vector2(rb2d.velocity.x, -100);
-                }
-            }
 
-            isWallClimbing = false;
+                    // Other wall jumps
+                }
+                // Classic jump
+                else
+                {
+                    rb2d.AddForce(Vector2.up * jumpVelocity, ForceMode2D.Impulse);
+                }
+            }
+            
+            if (timeUntilAirControl > 0) {
+                timeUntilAirControl -= Time.deltaTime;
+            } else {
+                timeUntilAirControl = 0;
+            }
         }
 
         void OnCollisionExit2D(Collision2D collider)
