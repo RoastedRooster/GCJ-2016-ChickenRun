@@ -10,8 +10,10 @@ namespace Parallax
         public float maxSpeed = 5f;
         public float moveForce = 365f;
         public int jumpVelocity = 5;
+        public int maxFrameHoldingJump = 20;
 
         private Rigidbody2D rb2d;
+        private int frameHoldingJump = 0;
 
         void Awake() {
             rb2d = GetComponent<Rigidbody2D>();
@@ -30,8 +32,20 @@ namespace Parallax
             }
             */
 
-            if(Input.GetKeyDown(KeyCode.Space))
-                gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * jumpVelocity, ForceMode2D.Impulse);
+            if((frameHoldingJump > 0 && !Input.GetKey(KeyCode.Space)) || frameHoldingJump >= maxFrameHoldingJump)
+            {
+                gameObject.GetComponent<Rigidbody2D>().AddForce(frameHoldingJump * Vector2.up * jumpVelocity / maxFrameHoldingJump, ForceMode2D.Impulse);
+                frameHoldingJump = 0;
+                Debug.Log("JUMP !");
+            }
+
+            if (Input.GetKey(KeyCode.Space) && !(Mathf.Abs(rb2d.velocity.y) > 10f))
+            {
+                frameHoldingJump++;
+                Debug.Log("Holding");
+            }
+
+            Debug.Log(rb2d.velocity.y);
         }
 
         void FixedUpdate() {
