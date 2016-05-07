@@ -33,8 +33,11 @@ namespace Parallax
         public float wallOffTime = .1f;
         public float timeUntilAirControl = 0;
 
+        Player playerScript;
+
         void Awake() {
             rb2d = GetComponent<Rigidbody2D>();
+            playerScript = GetComponent<Player>();
         }
 
         void Update()
@@ -43,7 +46,7 @@ namespace Parallax
 
         void FixedUpdate()
         {
-            float h = Input.GetAxisRaw("Horizontal");
+            float h = Input.GetAxisRaw("Horizontal_" + playerScript.ControllerIndex);
             
             if(grounded) {
                 rb2d.velocity = new Vector2(h * maxSpeed, rb2d.velocity.y);
@@ -73,9 +76,12 @@ namespace Parallax
                 // Slow player during wallSliding
                 rb2d.velocity = new Vector2(rb2d.velocity.x, -100);
             }
+
             
-            // if (Input.GetKey(KeyCode.Space) && (grounded || wallSliding)) {
-            if (Input.GetButton("Jump") && (grounded || wallSliding)) {
+            
+            if (Input.GetButton("Jump_" + playerScript.ControllerIndex) && (grounded || wallSliding)) {
+
+                Debug.Log("Jump_" + playerScript.ControllerIndex);
 
                 LawManager.Instance.PlayerEvent(TriggeringEventID.PlayerJump, gameObject.GetComponent<Player>());
 

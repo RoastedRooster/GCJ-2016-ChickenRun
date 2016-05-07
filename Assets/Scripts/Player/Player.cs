@@ -7,10 +7,20 @@ using UnityEngine;
 
 namespace roastedrooster.chickenrun.player
 {
+    
     public class Player : MonoBehaviour
     {
+        public int ControllerIndex;
         public string name;
         public int lapCounter = 0;
+
+        public void setControllerIndex(int i) {
+            ControllerIndex = i;
+        }
+
+        public int getControllerIndex() {
+            return ControllerIndex;
+        }
 
         public void Punished(Law law)
         {
