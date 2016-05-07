@@ -22,16 +22,14 @@ namespace Parallax
             {
                 gameObject.GetComponent<Rigidbody2D>().AddForce(frameHoldingJump * Vector2.up * jumpVelocity / maxFrameHoldingJump, ForceMode2D.Impulse);
                 frameHoldingJump = 0;
-                Debug.Log("JUMP !");
             }
 
             if (Input.GetKey(KeyCode.Space) && !(Mathf.Abs(rb2d.velocity.y) > 10f))
             {
                 frameHoldingJump++;
-                Debug.Log("Holding");
             }
 
-            Debug.Log(rb2d.velocity.y);
+            // Debug.Log(rb2d.velocity.y);
         }
 
         void FixedUpdate() {

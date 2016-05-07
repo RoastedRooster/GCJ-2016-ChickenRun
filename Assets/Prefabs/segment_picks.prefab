@@ -11,6 +11,7 @@ GameObject:
   - 212: {fileID: 21211498}
   - 61: {fileID: 6131694}
   - 60: {fileID: 6076244}
+  - 114: {fileID: 11449206}
   m_Layer: 0
   m_Name: segment_picks
   m_TagString: Untagged
@@ -39,13 +40,12 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: 68.36133, y: -75.65294}
-      - {x: 60.04834, y: -89.271866}
+    - - {x: 60.04834, y: -89.271866}
       - {x: 52.398926, y: -75.88907}
       - {x: 44.360046, y: -89.356125}
       - {x: 36.619568, y: -75.686295}
@@ -60,25 +60,12 @@ PolygonCollider2D:
       - {x: -35.566956, y: -89.628845}
       - {x: -43.576416, y: -75.78427}
       - {x: -51.740784, y: -89.455185}
-      - {x: -59.51703, y: -75.889084}
-      - {x: -67.64581, y: -89.8622}
-      - {x: -75.66907, y: -75.72455}
-      - {x: -84.119934, y: -89.964264}
-      - {x: 76.19855, y: -89.762024}
     - - {x: 20.589111, y: 85.482086}
       - {x: 28.356995, y: 99.179016}
       - {x: 36.48889, y: 85.64163}
       - {x: 44.395752, y: 99.484406}
       - {x: 52.494568, y: 85.56317}
-      - {x: 60.33899, y: 99.26831}
-      - {x: 68.55701, y: 85.79111}
-      - {x: 74.154724, y: 94.26929}
-      - {x: 76.30353, y: 100.089294}
-      - {x: -84.30353, y: 100.089294}
-      - {x: -80.89032, y: 92.70444}
-      - {x: -75.232056, y: 85.60718}
-      - {x: -68.13306, y: 99.08353}
-      - {x: -59.350708, y: 85.369354}
+      - {x: 60.34192, y: 99.61987}
       - {x: -51.789185, y: 99.575226}
       - {x: -49.76233, y: 94.822876}
       - {x: -43.460327, y: 85.58032}
@@ -105,6 +92,17 @@ BoxCollider2D:
   m_Offset: {x: 0, y: -95.00046}
   serializedVersion: 2
   m_Size: {x: 200, y: 9.999039}
+--- !u!114 &11449206
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 195072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b1f4d65832ec6244a54777058083659, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21211498
 SpriteRenderer:
   m_ObjectHideFlags: 1
