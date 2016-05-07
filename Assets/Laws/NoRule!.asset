@@ -14,4 +14,4 @@ MonoBehaviour:
   name: No Rule !
   eventID: 0
   duration: 5
-  optionalArg: 0
+  optionalArg: 2

@@ -38,9 +38,10 @@ namespace roastedrooster.chickenrun.laws
 
         public void PlayerEvent(TriggeringEventID eventID, Player player, float optionalArg = 0f)
         {
-            if (AppliedLaw.eventID == eventID && AppliedLaw.optionalArg == optionalArg)
+            var law = AppliedLaw;
+            if (law.eventID == eventID && law.optionalArg == optionalArg)
             {
-                player.Punished(AppliedLaw);
+                player.Punished(law);
             }
         }
 
