@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using roastedrooster.chickenrun.player;
 
 public class LapTriggerBehavior : MonoBehaviour {
 
@@ -15,7 +16,7 @@ public class LapTriggerBehavior : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other) {
         if(other.transform.tag == "Player" && other.isTrigger) {
-            Debug.Log("Lap");
+            other.GetComponent<Player>().increaseLap();
         }
     }
 }

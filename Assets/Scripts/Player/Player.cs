@@ -10,7 +10,7 @@ namespace roastedrooster.chickenrun.player
     public class Player : MonoBehaviour
     {
         public string name;
-        int lapCounter = 0;
+        public int lapCounter = 0;
 
         public void Punished(Law law)
         {
@@ -20,6 +20,24 @@ namespace roastedrooster.chickenrun.player
 
         public void increaseLap() {
             lapCounter++;
+        }
+
+        public int getLap() {
+            return lapCounter;
+        }
+
+        void Update() {
+
+            // PAUSE SYSTEM
+            if (Input.GetKeyDown(KeyCode.P)) {
+                if (Time.timeScale == 1) {
+                    Time.timeScale = 0;
+                }
+                else if (Time.timeScale == 0) {
+                    Time.timeScale = 1;
+                }
+            }
+            // END OF PAUSE SYSTEM
         }
 
     }
