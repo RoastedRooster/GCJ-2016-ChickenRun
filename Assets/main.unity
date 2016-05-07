@@ -569,15 +569,15 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 765530971}
   m_UseAutoMass: 0
-  m_Mass: 6
+  m_Mass: 15
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 50
+  m_AngularDrag: 0
+  m_GravityScale: 35
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!23 &765530974
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -635,9 +635,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  maxSpeed: 350
+  maxSpeed: 275
   moveForce: 0
-  jumpVelocity: 1500
+  jumpVelocity: 5000
+  maxFrameHoldingJump: 10
 --- !u!1001 &768236660
 Prefab:
   m_ObjectHideFlags: 0
@@ -900,6 +901,38 @@ Prefab:
     - target: {fileID: 22447080, guid: f9f817854ea67704d95957573bda3773, type: 2}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22479890, guid: f9f817854ea67704d95957573bda3773, type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0.397
+      objectReference: {fileID: 0}
+    - target: {fileID: 22479890, guid: f9f817854ea67704d95957573bda3773, type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0.6588072
+      objectReference: {fileID: 0}
+    - target: {fileID: 22479890, guid: f9f817854ea67704d95957573bda3773, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22479890, guid: f9f817854ea67704d95957573bda3773, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22479890, guid: f9f817854ea67704d95957573bda3773, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22479890, guid: f9f817854ea67704d95957573bda3773, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22479890, guid: f9f817854ea67704d95957573bda3773, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0.59900004
+      objectReference: {fileID: 0}
+    - target: {fileID: 22479890, guid: f9f817854ea67704d95957573bda3773, type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0.34452468
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f9f817854ea67704d95957573bda3773, type: 2}
