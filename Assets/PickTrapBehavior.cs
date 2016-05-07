@@ -14,6 +14,6 @@ public class PickTrapBehavior : MonoBehaviour {
 	}
 
     void OnTriggerEnter2D(Collider2D coll) {
-        GameObject.Destroy(coll.gameObject);
+        coll.transform.position = GameObject.FindGameObjectWithTag("start").transform.position;
     }
 }

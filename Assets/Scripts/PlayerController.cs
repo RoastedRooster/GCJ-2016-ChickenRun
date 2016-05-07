@@ -42,9 +42,14 @@ namespace Parallax
         {
             float h = Input.GetAxisRaw("Horizontal");
 
-            if(timeUntilAirControl == 0) {
+            if(grounded) {
                 rb2d.velocity = new Vector2(h * maxSpeed, rb2d.velocity.y);
+            } else {
+                if (timeUntilAirControl == 0) {
+                    rb2d.velocity = new Vector2(h * maxSpeed, rb2d.velocity.y);
+                }
             }
+            
 
             /*
             if (((frameHoldingJump > 0 && !Input.GetKey(KeyCode.Space)) || frameHoldingJump >= maxFrameHoldingJump) && (grounded || wallSliding)) {
