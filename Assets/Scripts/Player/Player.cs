@@ -10,10 +10,17 @@ namespace roastedrooster.chickenrun.player
     public class Player : MonoBehaviour
     {
         public string name;
+        int lapCounter = 0;
+
         public void Punished(Law law)
         {
             Debug.Log(name + "has been punished ! He didn't respect the \"" + law.name + "\" rule !");
             Destroy(gameObject);
         }
+
+        public void increaseLap() {
+            lapCounter++;
+        }
+
     }
 }
