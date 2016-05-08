@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 427172}
   - 212: {fileID: 21294698}
   - 61: {fileID: 6125274}
+  - 95: {fileID: 9509966}
   m_Layer: 0
   m_Name: finish line
   m_TagString: Untagged
@@ -43,6 +44,23 @@ BoxCollider2D:
   m_Offset: {x: 0, y: -95.00635}
   serializedVersion: 2
   m_Size: {x: 200, y: 9.987503}
+--- !u!95 &9509966
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 188700}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9a99789c3694ce54cb97859609b493b9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!212 &21294698
 SpriteRenderer:
   m_ObjectHideFlags: 1
