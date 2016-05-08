@@ -2325,7 +2325,7 @@ Transform:
   - {fileID: 1773883679}
   - {fileID: 1520805895}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!1 &1675540520
 GameObject:
   m_ObjectHideFlags: 0
@@ -2414,7 +2414,7 @@ Prefab:
     - target: {fileID: 11423946, guid: 511b4f885474088418600b7f99ef9f99, type: 2}
       propertyPath: availableLaws.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: f192daa83174c7c4baf726b466ecd5cf,
+      objectReference: {fileID: 11400000, guid: 66d99b92ded887a44b9b7e729bce5697,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 511b4f885474088418600b7f99ef9f99, type: 2}
@@ -2886,7 +2886,7 @@ Transform:
   - {fileID: 496355092}
   - {fileID: 943749200}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
 --- !u!4 &2139896425 stripped
 Transform:
   m_PrefabParentObject: {fileID: 419940, guid: 7864c9b2cf9de4a4a9d430226613ee12, type: 2}
