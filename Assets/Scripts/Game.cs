@@ -14,6 +14,7 @@ namespace roastedrooster.chickenrun.game {
     public class Game : MonoBehaviour
     {
         public GameObject[] players { get; set; }
+        public AudioClip victoryClip;
         GameObject panel;
 
         public void Start()
@@ -36,6 +37,7 @@ namespace roastedrooster.chickenrun.game {
                         // Change text to win message
                         // text.GetComponent<Text>().text = pl.name + " WIN !";
                         text.GetComponent<Text>().text = "We have a WINNER !";
+                        AudioSource.PlayClipAtPoint(victoryClip, Camera.main.transform.position);
 
                         StartCoroutine(restartGame());
                     }

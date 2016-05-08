@@ -2320,6 +2320,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11423946, guid: 511b4f885474088418600b7f99ef9f99, type: 2}
+      propertyPath: availableLaws.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 475986, guid: 511b4f885474088418600b7f99ef9f99, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2361,6 +2365,28 @@ Prefab:
       value: 
       objectReference: {fileID: 11400000, guid: 66d99b92ded887a44b9b7e729bce5697,
         type: 2}
+    - target: {fileID: 11423946, guid: 511b4f885474088418600b7f99ef9f99, type: 2}
+      propertyPath: availableLaws.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: f192daa83174c7c4baf726b466ecd5cf,
+        type: 2}
+    - target: {fileID: 11423946, guid: 511b4f885474088418600b7f99ef9f99, type: 2}
+      propertyPath: availableLaws.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: f192daa83174c7c4baf726b466ecd5cf,
+        type: 2}
+    - target: {fileID: 11423946, guid: 511b4f885474088418600b7f99ef9f99, type: 2}
+      propertyPath: noJumpClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 112600c90e716f24fa57657a7fb60c5b, type: 3}
+    - target: {fileID: 11423946, guid: 511b4f885474088418600b7f99ef9f99, type: 2}
+      propertyPath: noRuleClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e6a66c4b62a81f64ebcb5a9d8d516146, type: 3}
+    - target: {fileID: 11423946, guid: 511b4f885474088418600b7f99ef9f99, type: 2}
+      propertyPath: punishedClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0b5855f3dde5a6d4185a0a06c7635a2f, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 511b4f885474088418600b7f99ef9f99, type: 2}
   m_IsPrefabParent: 0
@@ -2802,6 +2828,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 11423246, guid: 2436c06ff5916994a9a0af1b6f4150a9, type: 2}
+      propertyPath: victoryClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ffde5f4445c0b654abae8cbe42fb10eb, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2436c06ff5916994a9a0af1b6f4150a9, type: 2}
   m_IsPrefabParent: 0

@@ -23,6 +23,9 @@ namespace roastedrooster.chickenrun.laws
         #region Inspector Fields
         public List<Law> availableLaws;
         public float timeBeforeFirstLaw = 5f;
+        public AudioClip noRuleClip;
+        public AudioClip noJumpClip;
+        public AudioClip punishedClip;
         #endregion
 
         public Law AppliedLaw { get; private set; }
@@ -41,6 +44,7 @@ namespace roastedrooster.chickenrun.laws
             var law = AppliedLaw;
             if (law.eventID == eventID && law.optionalArg == optionalArg)
             {
+                AudioSource.PlayClipAtPoint(punishedClip, Camera.main.transform.position);
                 player.Punished(law);
             }
         }
@@ -57,6 +61,15 @@ namespace roastedrooster.chickenrun.laws
             if ((AppliedLaw == null && now > timeBeforeFirstLaw) || now > _nextLawChange)
             {
                 AppliedLaw = availableLaws[UnityEngine.Random.Range(0, availableLaws.Count)];
+                if(AppliedLaw.eventID == TriggeringEventID.PlayerJump)
+                {
+                    AudioSource.PlayClipAtPoint(noJumpClip, Camera.main.transform.position);
+                }
+                else if(AppliedLaw.eventID == TriggeringEventID.None)
+                {
+                    AudioSource.PlayClipAtPoint(noRuleClip, Camera.main.transform.position);
+                }
+
                 _nextLawChange = now + AppliedLaw.duration;
             }
         }
