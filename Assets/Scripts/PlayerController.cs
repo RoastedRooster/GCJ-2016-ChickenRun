@@ -57,6 +57,10 @@ namespace roastedrooster.chickenrun.player
             if(gameStarted) {
                 float h = Input.GetAxisRaw("Horizontal_" + playerScript.ControllerIndex);
 
+                if(Mathf.Abs(h) > 0.5) {
+                    LawManager.Instance.PlayerEvent(TriggeringEventID.PlayerMove, gameObject.GetComponent<Player>());
+                }
+
                 if (grounded) {
                     rb2d.velocity = new Vector2(h * maxSpeed, rb2d.velocity.y);
                 }
