@@ -25,7 +25,7 @@ namespace roastedrooster.chickenrun.lobbyManager {
             if (!_gameStarted) {
                 bool playerInLobby = false;
 
-                for (int i = 1; i < 5; i++) {
+                for (int i = 0; i < 5; i++) {
 
                     playerInLobby = ControllerUsed(i);
 
