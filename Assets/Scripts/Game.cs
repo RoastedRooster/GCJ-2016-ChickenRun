@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 namespace roastedrooster.chickenrun.game {
     public class Game : MonoBehaviour
@@ -22,20 +24,42 @@ namespace roastedrooster.chickenrun.game {
         }
 
         public void Update() {
-            foreach(GameObject player in players) {
-                Player pl = player.GetComponent<Player>();
-                if(pl.getLap() == 3) {
-                    panel.GetComponent<DisplayRule>().enabled = false;
-                    // Search texts and clear time one
-                    GameObject text = GameObject.Find("Rule Name");
-                    GameObject.Find("Rule Time").GetComponent<Text>().text = "";
+            if(players.Count() > 0) {
+                foreach (GameObject player in players) {
+                    Player pl = player.GetComponent<Player>();
+                    if (pl.getLap() == 3) {
+                        panel.GetComponent<DisplayRule>().enabled = false;
+                        // Search texts and clear time one
+                        GameObject text = GameObject.Find("Rule Name");
+                        GameObject.Find("Rule Time").GetComponent<Text>().text = "";
 
-                    // Change text to win message
-                    // text.GetComponent<Text>().text = pl.name + " WIN !";
-                    text.GetComponent<Text>().text = "We have a WINNER !";
-                    Time.timeScale = 0;
+                        // Change text to win message
+                        // text.GetComponent<Text>().text = pl.name + " WIN !";
+                        text.GetComponent<Text>().text = "We have a WINNER !";
+
+                        StartCoroutine(restartGame());
+                    }
                 }
+            } else {
+                players = GameObject.FindGameObjectsWithTag("Player");
             }
+        }
+
+        IEnumerator restartGame() {
+            
+            foreach (GameObject player in players) {
+                player.GetComponent<PlayerController>().enabled = false;
+                player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            }
+            
+
+            yield return new WaitForSeconds(2f);
+
+            foreach (GameObject player in players) {
+                GameObject.Destroy(player);
+            }
+
+            SceneManager.LoadScene("lobby", LoadSceneMode.Single);
         }
 
         public void startGame() {
