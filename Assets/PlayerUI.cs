@@ -21,7 +21,7 @@ public class PlayerUI : MonoBehaviour {
 
 	void Update () {
 
-        if(gameHolder.players != null)
+        if(gameHolder.players != null && playerIndex - 1 < gameHolder.players.Length)
         {
             var go = gameHolder.players[playerIndex - 1];
             if (go != null && _player == null)
