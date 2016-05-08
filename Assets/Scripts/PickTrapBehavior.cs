@@ -15,5 +15,6 @@ public class PickTrapBehavior : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D coll) {
         coll.transform.position = GameObject.FindGameObjectWithTag("start").transform.position;
+        coll.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
     }
 }
