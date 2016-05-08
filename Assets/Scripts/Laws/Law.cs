@@ -8,7 +8,8 @@ namespace roastedrooster.chickenrun.laws
         None,
         PlayerJump,
         PlayerMove,
-        PlayerStill
+        PlayerStill,
+        PlayerTouching
     }
 
     [CreateAssetMenuAttribute(menuName = "Chicken Run Assets/Law")]

@@ -377,6 +377,7 @@ MonoBehaviour:
   playerLap: {fileID: 11428062}
   playerLapText: {fileID: 11418296}
   playerName: {fileID: 11464804}
+  gameHolder: {fileID: 0}
 --- !u!114 &11410648
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -392,6 +393,7 @@ MonoBehaviour:
   playerLap: {fileID: 11499162}
   playerLapText: {fileID: 11490022}
   playerName: {fileID: 11427700}
+  gameHolder: {fileID: 0}
 --- !u!114 &11410808
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -608,7 +610,7 @@ MonoBehaviour:
     m_FontSize: 22
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 22
+    m_MinSize: 6
     m_MaxSize: 47
     m_Alignment: 4
     m_AlignByGeometry: 1
@@ -665,6 +667,7 @@ MonoBehaviour:
   playerLap: {fileID: 11475332}
   playerLapText: {fileID: 11471740}
   playerName: {fileID: 11454056}
+  gameHolder: {fileID: 0}
 --- !u!114 &11450574
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -800,6 +803,7 @@ MonoBehaviour:
   playerLap: {fileID: 11410808}
   playerLapText: {fileID: 11440904}
   playerName: {fileID: 11417918}
+  gameHolder: {fileID: 0}
 --- !u!114 &11471740
 MonoBehaviour:
   m_ObjectHideFlags: 1

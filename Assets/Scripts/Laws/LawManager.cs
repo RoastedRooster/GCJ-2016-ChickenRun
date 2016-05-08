@@ -26,6 +26,7 @@ namespace roastedrooster.chickenrun.laws
         public AudioClip noRuleClip;
         public AudioClip noJumpClip;
         public AudioClip punishedClip;
+        public AudioClip noTouchingClip;
         #endregion
 
         public Law AppliedLaw { get; private set; }
@@ -68,6 +69,10 @@ namespace roastedrooster.chickenrun.laws
                 else if(AppliedLaw.eventID == TriggeringEventID.None)
                 {
                     AudioSource.PlayClipAtPoint(noRuleClip, Camera.main.transform.position);
+                }
+                else if(AppliedLaw.eventID == TriggeringEventID.PlayerTouching)
+                {
+                    AudioSource.PlayClipAtPoint(noTouchingClip, Camera.main.transform.position);
                 }
 
                 _nextLawChange = now + AppliedLaw.duration;

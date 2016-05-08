@@ -48,7 +48,19 @@ namespace roastedrooster.chickenrun.player
                 }
             }
             // END OF PAUSE SYSTEM
-        }
 
+            var players = GameObject.FindGameObjectsWithTag("Player");
+            foreach(var p in players)
+            {
+                if (p == gameObject)
+                    continue;
+
+                if(Vector2.Distance(p.transform.position, gameObject.transform.position) < 14)
+                {
+                    LawManager.Instance.PlayerEvent(TriggeringEventID.PlayerTouching, gameObject.GetComponent<Player>());
+                    LawManager.Instance.PlayerEvent(TriggeringEventID.PlayerTouching, p.GetComponent<Player>());
+                }
+            }
+        }
     }
 }

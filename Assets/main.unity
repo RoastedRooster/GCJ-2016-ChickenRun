@@ -948,11 +948,7 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11410648, guid: 2dc9c8626535694448911ba99b405981, type: 2}
-      propertyPath: gameHolder
-      value: 
-      objectReference: {fileID: 2076661807}
-    - target: {fileID: 11470978, guid: 2dc9c8626535694448911ba99b405981, type: 2}
+    - target: {fileID: 11407306, guid: 2dc9c8626535694448911ba99b405981, type: 2}
       propertyPath: gameHolder
       value: 
       objectReference: {fileID: 2076661807}
@@ -960,7 +956,11 @@ Prefab:
       propertyPath: gameHolder
       value: 
       objectReference: {fileID: 2076661807}
-    - target: {fileID: 11407306, guid: 2dc9c8626535694448911ba99b405981, type: 2}
+    - target: {fileID: 11470978, guid: 2dc9c8626535694448911ba99b405981, type: 2}
+      propertyPath: gameHolder
+      value: 
+      objectReference: {fileID: 2076661807}
+    - target: {fileID: 11410648, guid: 2dc9c8626535694448911ba99b405981, type: 2}
       propertyPath: gameHolder
       value: 
       objectReference: {fileID: 2076661807}
@@ -2322,7 +2322,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11423946, guid: 511b4f885474088418600b7f99ef9f99, type: 2}
       propertyPath: availableLaws.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 475986, guid: 511b4f885474088418600b7f99ef9f99, type: 2}
       propertyPath: m_LocalPosition.x
@@ -2373,7 +2373,7 @@ Prefab:
     - target: {fileID: 11423946, guid: 511b4f885474088418600b7f99ef9f99, type: 2}
       propertyPath: availableLaws.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: f192daa83174c7c4baf726b466ecd5cf,
+      objectReference: {fileID: 11400000, guid: c1949dcb395f2a74899c10120074ecb0,
         type: 2}
     - target: {fileID: 11423946, guid: 511b4f885474088418600b7f99ef9f99, type: 2}
       propertyPath: noJumpClip
@@ -2387,6 +2387,10 @@ Prefab:
       propertyPath: punishedClip
       value: 
       objectReference: {fileID: 8300000, guid: 0b5855f3dde5a6d4185a0a06c7635a2f, type: 3}
+    - target: {fileID: 11423946, guid: 511b4f885474088418600b7f99ef9f99, type: 2}
+      propertyPath: noTouchingClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 21497ec4e665ab9429f202a554f7ee64, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 511b4f885474088418600b7f99ef9f99, type: 2}
   m_IsPrefabParent: 0
