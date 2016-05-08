@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using roastedrooster.chickenrun.laws;
 using roastedrooster.chickenrun.player;
 
-namespace Parallax
+namespace roastedrooster.chickenrun.playerController
 {
     public class PlayerController : MonoBehaviour {
         public float maxSpeed = 5f;
@@ -80,16 +80,11 @@ namespace Parallax
             
             
             if (Input.GetButton("Jump_" + playerScript.ControllerIndex) && (grounded || wallSliding)) {
-
-                Debug.Log("Jump_" + playerScript.ControllerIndex);
-
+                
                 LawManager.Instance.PlayerEvent(TriggeringEventID.PlayerJump, gameObject.GetComponent<Player>());
 
                 if (wallSliding) {
                     // Wall hopping
-                    Debug.Log("H : " + Mathf.Abs(h));
-                    Debug.Log("SlidingDirection : " + slidingDirection / 2);
-                    
                     if (Mathf.Abs(h) >= (0.5 * Mathf.Abs(slidingDirection)) && !grounded) {
                     // if (h == slidingDirection && !grounded) {
                         rb2d.velocity = new Vector2(-slidingDirection * wallJumpClimb.x, wallJumpClimb.y);
