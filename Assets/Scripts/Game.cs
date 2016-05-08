@@ -13,7 +13,7 @@ using System.Collections;
 namespace roastedrooster.chickenrun.game {
     public class Game : MonoBehaviour
     {
-        GameObject[] players;
+        public GameObject[] players { get; set; }
         GameObject panel;
 
         public void Start()
