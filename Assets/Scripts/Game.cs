@@ -18,6 +18,7 @@ namespace roastedrooster.chickenrun.game {
         {
             players = GameObject.FindGameObjectsWithTag("Player");
             panel = GameObject.Find("Panel");
+            startGame();
         }
 
         public void Update() {
@@ -34,6 +35,13 @@ namespace roastedrooster.chickenrun.game {
                     text.GetComponent<Text>().text = "We have a WINNER !";
                     Time.timeScale = 0;
                 }
+            }
+        }
+
+        public void startGame() {
+            foreach (GameObject player in players) {
+                PlayerController pl = player.GetComponent<PlayerController>();
+                pl.setGameStarted(true);
             }
         }
     }

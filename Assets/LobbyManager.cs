@@ -30,15 +30,14 @@ namespace roastedrooster.chickenrun.lobbyManager {
                     playerInLobby = ControllerUsed(i);
 
                     if (Players.Count < 4 && !playerInLobby && Input.GetButtonDown("Jump_" + i)) {
-                        Debug.Log("NOP");
                         AddPlayer(i);
                     }
+                }
 
-                    /*
-                    if (playerInLobby && Input.GetButtonDown("Fire2_" + i)) {
-                        RemovePlayer(i);
+                if(Input.GetButtonDown("Start")) {
+                    if(Players.Count() >= 2) {
+                        SceneManager.LoadScene("main", LoadSceneMode.Single);
                     }
-                    */
                 }
 
             }
@@ -60,7 +59,12 @@ namespace roastedrooster.chickenrun.lobbyManager {
             if (availableSlotIndex != -1) {
 
                 // Create player gameobject
-                GameObject player = GameObject.Instantiate(playerPrefab, startingPosition.transform.position, Quaternion.identity) as GameObject;
+                // GameObject player = GameObject.Instantiate(playerPrefab, startingPosition.transform.position, Quaternion.identity) as GameObject;
+
+                Vector2 pos = startingPosition.transform.position;
+                pos.x = pos.x - (availableSlotIndex * 150);
+
+                GameObject player = GameObject.Instantiate(playerPrefab, pos, Quaternion.identity) as GameObject;
                 player.GetComponent<Player>().ControllerIndex = controllerIndex;
                 Players.Add(availableSlotIndex, player);
 
