@@ -132,6 +132,7 @@ namespace roastedrooster.chickenrun.player
         }
 
         void OnCollisionStay2D(Collision2D collision) {
+
             foreach (ContactPoint2D cp in collision.contacts) {
 
                 if (cp.otherCollider == leftCollider || cp.otherCollider == rightCollider) {
@@ -152,7 +153,6 @@ namespace roastedrooster.chickenrun.player
                 }
             }
         }
-        
     }
 }
 

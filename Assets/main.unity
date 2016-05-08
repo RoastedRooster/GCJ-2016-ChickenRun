@@ -724,7 +724,7 @@ Transform:
   - {fileID: 610699222}
   - {fileID: 211030646}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 13
 --- !u!1001 &401664343
 Prefab:
   m_ObjectHideFlags: 0
@@ -2325,7 +2325,7 @@ Transform:
   - {fileID: 1773883679}
   - {fileID: 1520805895}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!1 &1675540520
 GameObject:
   m_ObjectHideFlags: 0
@@ -2886,7 +2886,7 @@ Transform:
   - {fileID: 496355092}
   - {fileID: 943749200}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 9
 --- !u!4 &2139896425 stripped
 Transform:
   m_PrefabParentObject: {fileID: 419940, guid: 7864c9b2cf9de4a4a9d430226613ee12, type: 2}
